@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 00:14:27 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/21 22:59:18 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/22 00:05:48 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strdup(char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_itoa(int num);
+char	*ft_strjoin(char *s1, char *s2);
 
 #endif
