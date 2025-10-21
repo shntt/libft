@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 01:32:51 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/21 20:30:28 by shitakah         ###   ########.fr       */
+/*   Created: 2025/10/21 20:39:10 by shitakah          #+#    #+#             */
+/*   Updated: 2025/10/21 21:31:12 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+int	ft_memcmp(void *s1, void *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*us1;
+	unsigned char	*us2;
 
+	us1 = (unsigned char *)s1;
+	us2 = (unsigned char *)s2;
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] && s2[i] && i < n)
+	while (i < n)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (us1[i] - us2[i])
+			return (us1[i] - us2[i]);
 		i++;
 	}
-	if ((!s1[i] || !s2[i]) && !(i == n))
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	return (0);
 }

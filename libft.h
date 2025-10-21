@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 00:14:27 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/21 01:58:32 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/21 22:59:18 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <stdlib.h>
 
 int		ft_atoi(char *nptr);
+void	*ft_bzero(void *s, size_t n);
+void	*ft_memchr(void *s, int c, size_t n);
+int		ft_memcmp(void *s1, void *s2, size_t n);
+void	*ft_memcpy(void *dest, void *src, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
+void	*ft_memmove(void *dest, void *src, size_t n);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -27,7 +33,10 @@ size_t	ft_strlcat(char *dst, char *src, size_t size);
 int		ft_strlen(char *str);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
+void	*ft_strnstr(char *big, char *little, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char	*ft_strdup(char *s);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
