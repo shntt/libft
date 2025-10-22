@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 00:00:50 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/22 20:04:14 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/22 23:32:43 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	char	*dest;
 	size_t	s_len;
-	size_t	i;
 
-	i = 0;
 	s_len = ft_strlen(s);
 	if (s_len < len + start)
 		len = s_len - start;
