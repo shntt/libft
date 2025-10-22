@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 00:14:27 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/22 00:05:48 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/22 21:30:28 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdbool.h>
 
 int		ft_atoi(char *nptr);
 void	*ft_bzero(void *s, size_t n);
@@ -39,6 +40,9 @@ int		ft_toupper(int c);
 char	*ft_strdup(char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_itoa(int num);
+char	*ft_substr(char *s, unsigned int start, size_t len);
 char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strtrim(char *s1, char *set);
+char	**ft_split(char *s, char c);
 
 #endif

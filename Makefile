@@ -6,7 +6,7 @@
 #    By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/07 23:42:17 by shitakah          #+#    #+#              #
-#    Updated: 2025/10/22 00:05:51 by shitakah         ###   ########.fr        #
+#    Updated: 2025/10/22 21:30:32 by shitakah         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC = \
 	ft_strncmp.c ft_strchr.c ft_strrchr.c ft_strlen.c ft_tolower.c \
 	ft_toupper.c ft_strlcpy.c ft_strlcat.c ft_memset.c ft_bzero.c ft_memcpy.c \
 	ft_memmove.c ft_memcmp.c ft_memchr.c ft_strnstr.c ft_strdup.c ft_calloc.c \
-	ft_itoa.c ft_strjoin.c
+	ft_itoa.c ft_strjoin.c ft_substr.c ft_strtrim.c ft_split.c
 	
 
 OBJ = $(SRC:.c=.o)
