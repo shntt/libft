@@ -6,13 +6,15 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 01:53:05 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/09 01:16:15 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/24 01:20:37 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

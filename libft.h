@@ -6,15 +6,15 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 00:14:27 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/22 23:53:19 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/24 01:38:56 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
 # include <stdbool.h>
+# include <stdlib.h>
 # include <unistd.h>
 
 int		ft_atoi(char *nptr);
@@ -32,7 +32,7 @@ int		ft_isprint(int c);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, char *src, size_t size);
 size_t	ft_strlcat(char *dst, char *src, size_t size);
-int		ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
 void	*ft_strnstr(char *big, char *little, size_t len);
@@ -49,5 +49,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_strmapi(char *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif

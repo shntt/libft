@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:42:33 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/23 00:06:04 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/23 00:58:41 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,24 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long long	res;
+	char		digit;
+	long long	lln;
 
-	res = 0;
-	n = (long long)n;
-	if (n < 0)
+	lln = (long long)n;
+	if (lln == 0)
+	{
+		write(fd, "0", 1);
+		return ;
+	}
+	if (lln < 0)
 	{
 		write(fd, "-", 1);
-		n *= -1;
+		lln *= -1;
 	}
-	while (n > 0)
+	if (lln >= 10)
 	{
-		ft_putnbr_fd(n / 10, fd);
-		n /= 10;
+		ft_putnbr_fd(lln / 10, fd);
 	}
-	res = n % 10 + '0';
-	write(fd, &res, 1);
+	digit = (char)(lln % 10 + '0');
+	write(fd, &digit, 1);
 }

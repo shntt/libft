@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:42:33 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/22 23:49:22 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/23 01:02:06 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ void	ft_putendl_fd(char *s, int fd)
 	{
 		write(fd, s++, 1);
 	}
+	write(fd, "\n", 1);
 }
