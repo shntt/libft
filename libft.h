@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 00:14:27 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/24 01:38:56 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/27 20:47:53 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_isprint(int c);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, char *src, size_t size);
 size_t	ft_strlcat(char *dst, char *src, size_t size);
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
 void	*ft_strnstr(char *big, char *little, size_t len);

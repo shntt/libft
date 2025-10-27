@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 00:00:50 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/22 23:32:43 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/27 20:48:04 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	size_t	s_len;
 
 	s_len = ft_strlen(s);
-	if (s_len < len + start)
+	if (s_len < start)
+		len = 0;
+	else if (s_len < len + start)
 		len = s_len - start;
 	dest = malloc(sizeof(char) * (len + 1));
 	if (!dest)

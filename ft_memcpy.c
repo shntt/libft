@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 20:39:10 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/21 20:58:28 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:24:17 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 	unsigned char	*uc_d;
 	unsigned char	*uc_s;
 
+	if (!dest && !src)
+		return (NULL);
 	uc_d = (unsigned char *)dest;
 	uc_s = (unsigned char *)src;
 	i = 0;
