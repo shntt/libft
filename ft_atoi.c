@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 23:05:49 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/09 01:32:36 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/27 20:59:55 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_issign(int c)
 	return (0);
 }
 
-int	ft_atoi(char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	sign;
 	int	result;

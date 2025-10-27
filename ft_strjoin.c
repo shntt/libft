@@ -6,13 +6,13 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 00:00:50 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/22 00:07:48 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/27 22:17:38 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dest;
 	size_t	s1_len;

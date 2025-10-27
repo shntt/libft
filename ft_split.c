@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:29:28 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/27 20:41:52 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:13:52 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	free_words(char **arr, size_t j)
 	free(arr);
 }
 
-static size_t	count_words(char *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	size_t	n;
 	bool	in;
@@ -44,7 +44,7 @@ static size_t	count_words(char *s, char c)
 	return (n);
 }
 
-static char	*dup_range(char *start, size_t len)
+static char	*dup_range(char const *start, size_t len)
 {
 	char	*p;
 	size_t	i;
@@ -62,7 +62,7 @@ static char	*dup_range(char *start, size_t len)
 	return (p);
 }
 
-static char	**func(char *s, char c, char **arr, bool in)
+static char	**func(char const *s, char c, char **arr, bool in)
 {
 	size_t	i;
 	size_t	j;
@@ -91,7 +91,7 @@ static char	**func(char *s, char c, char **arr, bool in)
 	return (arr[j] = NULL, arr);
 }
 
-char	**ft_split(char *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 	size_t	words;

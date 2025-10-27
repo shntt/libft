@@ -6,13 +6,13 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 22:44:12 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/21 22:52:24 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/27 22:17:15 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*dest;
 	size_t	len;

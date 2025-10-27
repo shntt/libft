@@ -6,13 +6,13 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:05:00 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/24 02:49:51 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/27 22:17:59 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static bool	has_set(char c, char *set)
+static bool	has_set(char c, char const *set)
 {
 	while (*set)
 	{
@@ -23,7 +23,7 @@ static bool	has_set(char c, char *set)
 	return (false);
 }
 
-char	*ft_strtrim(char *s1, char *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
