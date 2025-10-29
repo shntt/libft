@@ -6,13 +6,13 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 23:05:49 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/27 20:59:55 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/29 23:11:37 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	if (c == ' ')
 		return (1);
@@ -29,7 +29,7 @@ int	ft_isspace(int c)
 	return (0);
 }
 
-int	ft_issign(int c)
+static int	ft_issign(int c)
 {
 	if (c == '+')
 		return (1);

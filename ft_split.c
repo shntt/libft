@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:29:28 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/27 21:13:52 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/29 23:32:52 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static char	*dup_range(char const *start, size_t len)
 	return (p);
 }
 
-static char	**func(char const *s, char c, char **arr, bool in)
+static char	**alloc_words(char const *s, char c, char **arr, bool in)
 {
 	size_t	i;
 	size_t	j;
@@ -102,7 +102,7 @@ char	**ft_split(char const *s, char c)
 	arr = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!arr)
 		return (NULL);
-	if (!func(s, c, arr, false))
+	if (!alloc_words(s, c, arr, false))
 		return (NULL);
 	return (arr);
 }

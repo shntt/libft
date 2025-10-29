@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:52:28 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/27 21:35:31 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/29 23:41:30 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len;
 	char	*dst;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	dst = malloc(sizeof(char) * (len + 1));
 	if (!dst)
 		return (NULL);
+	if (!f)
+		return (dst);
 	while (i < len)
 	{
 		dst[i] = f(i, s[i]);

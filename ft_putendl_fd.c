@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:42:33 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/23 01:02:06 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/29 23:25:28 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
-	{
 		write(fd, s++, 1);
-	}
 	write(fd, "\n", 1);
 }

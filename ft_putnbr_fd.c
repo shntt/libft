@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:42:33 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/23 00:58:41 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/29 23:13:00 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,7 @@ void	ft_putnbr_fd(int n, int fd)
 		lln *= -1;
 	}
 	if (lln >= 10)
-	{
 		ft_putnbr_fd(lln / 10, fd);
-	}
 	digit = (char)(lln % 10 + '0');
 	write(fd, &digit, 1);
 }

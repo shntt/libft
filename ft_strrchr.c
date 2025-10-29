@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 01:15:08 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/27 22:47:52 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/29 23:15:30 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strrchr(const char *s, int c)
 	p = 0;
 	while (*s)
 	{
-		if (*s == (unsigned char)c)
+		if (*s == (char)c)
 			p = (char *)s;
 		s++;
 	}
-	if (*s == (unsigned char)c)
+	if (*s == (char)c)
 		return ((char *)s);
 	return (p);
 }

@@ -6,7 +6,7 @@
 /*   By: shitakah <shitakah@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 22:56:31 by shitakah          #+#    #+#             */
-/*   Updated: 2025/10/29 20:09:02 by shitakah         ###   ########.fr       */
+/*   Updated: 2025/10/29 23:10:48 by shitakah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*dest;
+	char	*ptr;
+	size_t	total;
 
-	if (nmemb > SIZE_MAX / size)
-		return (NULL);
 	if (size == 0 || nmemb == 0)
 	{
-		dest = malloc(0);
-		if (!dest)
-			return (NULL);
-		return (dest);
+		size = 0;
+		nmemb = 0;
 	}
-	dest = malloc(nmemb * size);
-	if (!dest)
+	if (size != 0 && nmemb > SIZE_MAX / size)
 		return (NULL);
-	ft_bzero(dest, nmemb * size);
-	return (dest);
+	total = nmemb * size;
+	ptr = malloc(total);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, total);
+	return (ptr);
 }
